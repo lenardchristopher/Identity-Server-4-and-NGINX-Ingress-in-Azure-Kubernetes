@@ -1,0 +1,4 @@
+.vscode/*
+.vs/*
+identity-server-4/bin/*
+identity-server-4/obj/*

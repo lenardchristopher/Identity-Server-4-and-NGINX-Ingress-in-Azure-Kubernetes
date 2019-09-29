@@ -1,0 +1,12 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "dll",
+      "exe": "",
+      "project": "identity-server-4.csproj",
+      "name": "identity-server-4.csproj"
+    }
+  ]
+}
