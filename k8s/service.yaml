@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: idsvr4
+spec:
+  selector:
+    app: identity-server
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

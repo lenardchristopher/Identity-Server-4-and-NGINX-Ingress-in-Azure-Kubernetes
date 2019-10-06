@@ -54,26 +54,26 @@ namespace identity_server_4
             builder.AddInMemoryApiResources(Configuration.GetSection("ApiResources"));
             builder.AddInMemoryClients(Configuration.GetSection("clients"));
 
-            if (Environment.IsDevelopment())
-            {
+            // if (Environment.IsDevelopment())
+            // {
                 builder.AddDeveloperSigningCredential();
-            }
-            else
-            {
-                throw new Exception("need to configure key material");
-            }
+            // }
+            // else
+            // {
+            //     throw new Exception("need to configure key material");
+            // }
 
-            services.AddAuthentication()
-                .AddGoogle(options =>
-                {
-                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+            services.AddAuthentication();
+                // .AddGoogle(options =>
+                // {
+                //     options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
 
-                    // register your IdentityServer with Google at https://console.developers.google.com
-                    // enable the Google+ API
-                    // set the redirect URI to http://localhost:5000/signin-google
-                    options.ClientId = "copy client ID from Google here";
-                    options.ClientSecret = "copy client secret from Google here";
-                });
+                //     // register your IdentityServer with Google at https://console.developers.google.com
+                //     // enable the Google+ API
+                //     // set the redirect URI to http://localhost:5000/signin-google
+                //     options.ClientId = "copy client ID from Google here";
+                //     options.ClientSecret = "copy client secret from Google here";
+                // });
 
             services.Configure<ForwardedHeadersOptions>(options =>
             {
